@@ -6,6 +6,11 @@ def test_get_dni():
     dni = "78484464T"
     assert Dni(dni).getDni() == dni
 
+@pytest.mark.obtener_letra
+def test_get_letter():
+    dni = "78484464T"
+    assert Dni(dni).getLetter() == "T"
+
 pytest.mark.dni_valido
 def test_valid_dni():
     valid_dnis = [
