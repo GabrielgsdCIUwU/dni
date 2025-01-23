@@ -4,3 +4,6 @@ class Dni:
 
     def getDni(self):
         return self.dni
+    
+    def getLetter(self):
+        return self.getDni()[-1]
