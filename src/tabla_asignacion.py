@@ -5,4 +5,10 @@ class TablaAsignacion:
 
     def getTable(self):
         return self.table
-     
+    
+    def getLetter(self, position):
+        try:
+            return self.tabla[position]
+        except IndexError:
+            return None
+    
