@@ -8,7 +8,7 @@ class TablaAsignacion:
     
     def getLetter(self, position):
         try:
-            return self.tabla[position]
+            return self.getTable()[position]
         except IndexError:
             return None
     
