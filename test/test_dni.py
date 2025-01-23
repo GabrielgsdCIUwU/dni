@@ -1,4 +1,10 @@
 import pytest
+from src.dni import Dni
+
+@pytest.mark.obtener_dni
+def test_get_dni():
+    dni = "78484464T"
+    assert Dni(dni).getDni() == dni
 
 pytest.mark.dni_valido
 def test_valid_dni():
