@@ -11,6 +11,11 @@ def test_get_letter():
     dni = "78484464T"
     assert Dni(dni).getLetter() == "T"
 
+@pytest.mark.obtener_numero
+def test_get_number():
+    dni = "39492958A"
+    assert Dni(dni).getNumber() == "39492958"
+
 pytest.mark.dni_valido
 def test_valid_dni():
     valid_dnis = [
