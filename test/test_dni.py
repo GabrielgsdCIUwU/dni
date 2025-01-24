@@ -18,7 +18,7 @@ def test_get_number():
 
 pytest.mark.dni_valido
 def test_valid_dni():
-    valid_dnis = [
+    validDnis = [
         "78484464T",
         "72376173A",
         "01817200Q",
@@ -37,5 +37,5 @@ def test_valid_dni():
 
     ]
 
-    for dni in valid_dnis:
-        assert  Dni(dni).is_valid_dni()
+    for dni in validDnis:
+        assert  Dni(dni).isDniValid()
