@@ -1,6 +1,7 @@
 import pytest
 from src.dni import Dni
 import random
+from src.colors import Colors
 
 @pytest.mark.obtener_dni
 def test_get_dni():
@@ -62,9 +63,9 @@ def test_random_dni():
     #pytest -s to print with pytest
     for dni in testCases:
         if Dni(dni).isDniValid():
-            print(f"Valid DNI: {dni}")
+            print(f"{Colors.GREEN} Valid DNI:{Colors.RESET} {dni}")
         else:
-            print(f"Invalid DNI: {dni}")
+            print(f"{Colors.RED} Invalid DNI: {Colors.RESET} {dni}")
 
 @pytest.mark.dni_invalido
 def test_invalid_dni():
