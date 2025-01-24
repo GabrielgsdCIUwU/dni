@@ -6,7 +6,7 @@ class TablaAsignacion:
     def getTable(self):
         return self.table
     
-    def getLetter(self, position):
+    def getLetterFromPositionTable(self, position):
         try:
             return self.getTable()[position]
         except IndexError:
