@@ -18,3 +18,7 @@ class TablaAsignacion:
             return self.getLetterFromPositionTable(position)
         except ValueError:
             return None
+        
+    def __repr__(self):
+        return f"Tabla letras: {', '.join(self.getTable())}"
+
