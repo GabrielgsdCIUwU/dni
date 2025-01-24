@@ -12,3 +12,9 @@ def test_get_letter_from_position():
     
     for i in range(len(table)):
         assert tabla_asignation.getLetterFromPositionTable(i)
+
+@pytest.mark.calcular_letra
+def test_calculate_letter():
+    tabla_asignation = TablaAsignacion()
+    letter = tabla_asignation.calculateLetter("77422360")
+    assert letter == 'J'
