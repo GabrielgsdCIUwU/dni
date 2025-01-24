@@ -1,6 +1,8 @@
 from src.tabla_asignacion import TablaAsignacion as TA
 class Dni:
-    def __init__(self, dni):
+    LENGTH_DNI = 9
+
+    def __init__(self, dni=""):
         self.dni = dni
 
     def getDni(self):
@@ -12,5 +14,12 @@ class Dni:
     def getNumber(self):
         return self.getDni()[:-1]
 
+    def isInputDniValid(self):
+        return bool(self.getDni())
+
+    def isLengthDniValid(self):
+        return len(self.getDni()) == self.LENGTH_DNI
+
     def isDniValid(self):
-        return TA().calculateLetter(self.getNumber()) == self.getLetter()
+        return self.isInputDniValid() and self.isLengthDniValid() and \
+        TA().calculateLetter(self.getNumber()) == self.getLetter()
