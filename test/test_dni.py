@@ -1,5 +1,6 @@
 import pytest
 from src.dni import Dni
+import random
 
 @pytest.mark.obtener_dni
 def test_get_dni():
@@ -39,3 +40,28 @@ def test_valid_dni():
 
     for dni in validDnis:
         assert  Dni(dni).isDniValid()
+
+pytest.mark.dni_aleatorio
+def test_random_dni():
+    
+    # while acumulator
+    minNumberDni = 11111111
+    maxNumberDni = 999999999
+
+    asciiLetterA = 65
+    asciiLetterZ = 90
+    
+    testCases = []
+    numberCases = 30
+    while len(testCases) <= numberCases:
+        numberDni = random.randint(minNumberDni, maxNumberDni)
+        asciiCharacter = random.randint(asciiLetterA, asciiLetterZ)
+
+        testCases.append(str(numberDni) + chr(asciiCharacter))
+    
+    #pytest -s to print with pytest
+    for dni in testCases:
+        if Dni(dni).isDniValid():
+            print(f"Valid DNI: {dni}")
+        else:
+            print(f"Invalid DNI: {dni}")
