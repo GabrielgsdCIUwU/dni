@@ -7,3 +7,7 @@ class Dni:
     
     def getLetter(self):
         return self.getDni()[-1]
+    
+    def getNumber(self):
+        return self.getDni()[:-1]
+
