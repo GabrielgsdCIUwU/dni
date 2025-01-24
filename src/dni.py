@@ -4,6 +4,7 @@ class Dni:
 
     def __init__(self, dni=""):
         self.dni = dni
+        self.table = TA()
 
     def getDni(self):
         return self.dni
@@ -22,4 +23,7 @@ class Dni:
 
     def isDniValid(self):
         return self.isInputDniValid() and self.isLengthDniValid() and \
-        TA().calculateLetter(self.getNumber()) == self.getLetter()
+        self.table.calculateLetter(self.getNumber()) == self.getLetter()
+    
+    def __repr__(self):
+        return f"{self.getDni()}"
