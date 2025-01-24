@@ -80,7 +80,9 @@ def test_invalid_dni():
         "652673519L",
         "547628548I",
         "983419495R",
-        "898273005H"
+        "898273005H",
+        "",
+        "0123"
     ]
 
     for dni in invalidDnis:
