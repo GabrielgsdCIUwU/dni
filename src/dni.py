@@ -24,3 +24,6 @@ class Dni:
     def isDniValid(self):
         return self.isInputDniValid() and self.isLengthDniValid() and \
         self.table.calculateLetter(self.getNumber()) == self.getLetter()
+    
+    def __repr__(self):
+        return f"{self.getDni()}"
