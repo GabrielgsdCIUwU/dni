@@ -65,3 +65,23 @@ def test_random_dni():
             print(f"Valid DNI: {dni}")
         else:
             print(f"Invalid DNI: {dni}")
+
+@pytest.mark.dni_invalido
+def test_invalid_dni():
+    invalidDnis = [
+        "43770614Z",
+        "109554436M",
+        "315845952J",
+        "828529506A",
+        "925447738E",
+        "32884726C",
+        "506819213Z",
+        "139981092V",
+        "652673519L",
+        "547628548I",
+        "983419495R",
+        "898273005H"
+    ]
+
+    for dni in invalidDnis:
+        assert Dni(dni).isDniValid() is False
