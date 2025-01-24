@@ -12,3 +12,9 @@ class TablaAsignacion:
         except IndexError:
             return None
     
+    def calculateLetter(self, dni):
+        try:
+            position = int(dni) % len(self.getTable())
+            return self.getLetterFromPositionTable(position)
+        except ValueError:
+            return None
