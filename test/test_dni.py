@@ -1,8 +1,24 @@
 import pytest
+from src.dni import Dni
+
+@pytest.mark.obtener_dni
+def test_get_dni():
+    dni = "78484464T"
+    assert Dni(dni).getDni() == dni
+
+@pytest.mark.obtener_letra
+def test_get_letter():
+    dni = "78484464T"
+    assert Dni(dni).getLetter() == "T"
+
+@pytest.mark.obtener_numero
+def test_get_number():
+    dni = "39492958A"
+    assert Dni(dni).getNumber() == "39492958"
 
 pytest.mark.dni_valido
 def test_valid_dni():
-    valid_dnis = [
+    validDnis = [
         "78484464T",
         "72376173A",
         "01817200Q",
@@ -21,5 +37,5 @@ def test_valid_dni():
 
     ]
 
-    for dni in valid_dnis:
-        assert  Dni(dni).is_valid_dni()
+    for dni in validDnis:
+        assert  Dni(dni).isDniValid()
