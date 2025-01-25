@@ -43,6 +43,11 @@ else:
     print("El DNI no es válido")
 ```
 
+También puedes usar el `app.py` para generar DNI aleatorio o solo válido.
+```sh
+py app.py
+```
+
 ## Tests
 
 Para ejecutar los tests, utiliza pytest. Los tests están ubicados en el directorio test y cubren diferentes casos de uso para la validación de DNIs.
